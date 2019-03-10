@@ -1,4 +1,4 @@
-import { Controller, Get, Res, HttpStatus, NotFoundException, Param, Body, Post, Put, Query, Delete } from '@nestjs/common';
+import { Controller, Get, Res, HttpStatus, NotFoundException, Param, Body, Post, Query, Delete, Patch } from '@nestjs/common';
 import { CodelabsService } from '../service/codelabs.service';
 import { ValidateObjectId } from '../../shared/pipes/valIdate-object-Id.pipes';
 import { CodelabDto } from '../dto/codelab.dto';
@@ -33,7 +33,7 @@ export class CodelabsController {
       });
   }
 
-  @Put('/edit')
+  @Patch('/edit')
   async editcodelab(
       @Res() res,
       @Query('codelabId', new ValidateObjectId()) codelabId,
