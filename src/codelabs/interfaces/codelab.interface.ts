@@ -10,4 +10,5 @@ export interface Codelab extends Document {
     readonly date_posted: string;
     readonly practice: string;
     readonly steps: Step[];
+    readonly description: string;
 }

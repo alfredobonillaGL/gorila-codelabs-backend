@@ -9,4 +9,5 @@ export const CodelabSchema = new mongoose.Schema({
   date_posted: String,
   practice: String,
   steps: Array,
+  description: String,
 });
